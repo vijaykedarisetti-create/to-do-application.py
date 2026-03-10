@@ -1,0 +1,20 @@
+tasks = []
+
+while True:
+    print("1.Add Task\n2.View Tasks\n3.Delete Task\n4.Exit")
+    ch = input("Enter choice: ")
+
+    if ch == "1":
+        task = input("Enter task: ")
+        tasks.append(task)
+
+    elif ch == "2":
+        for i in range(len(tasks)):
+            print(i+1, tasks[i])
+
+    elif ch == "3":
+        num = int(input("Enter task number: "))
+        tasks.pop(num-1)
+
+    else:
+        break
